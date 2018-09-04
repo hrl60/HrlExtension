@@ -1,4 +1,4 @@
-Useful .Net Extensions
+Useful .Net Extensions with C#
 
 String Extensions like:
 ToInt
