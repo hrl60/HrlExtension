@@ -1,5 +1,5 @@
 Useful .Net Extensions with C#
-
+ 
 String Extensions like:
 ToInt
 ToInt16
@@ -20,3 +20,6 @@ In
 Between
 OrderBy
 ...
+
+Nuget Link: https://www.nuget.org/packages/HrlExtentions/
+ 
