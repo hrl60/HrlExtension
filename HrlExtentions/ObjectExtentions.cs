@@ -10,19 +10,22 @@ namespace HrlExtentions
 {
     public static class ObjectExtentions
     {
+        /// <summary>
+        /// Check object is Null
+        /// </summary>
+        /// <param name="source"></param>
+        /// <returns></returns>
         public static bool IsNull(this object source)
         {
             return source == null;
         }
-        public static void Raise(this EventHandler eventHandler,
-          object sender, EventArgs e)
-        {
-            if (eventHandler != null)
-            {
-                eventHandler(sender, e);
-            }
-        }
 
+        /// <summary>
+        /// Check Object Has specify Property By Name
+        /// </summary>
+        /// <param name="Inp"></param>
+        /// <param name="PropName"></param>
+        /// <returns></returns>
         public static bool HasPropertie(this Object Inp, string PropName)
         {
             bool retval = false;
@@ -32,16 +35,7 @@ namespace HrlExtentions
             return retval;
         }
       
-        public static void Raise<T>(this EventHandler<T> eventHandler,
-            object sender, T e)
-           where T : EventArgs
-        {
-            if (eventHandler != null)
-            {
-                eventHandler(sender, e);
-            }
-        }
-     
+      
      
         
 

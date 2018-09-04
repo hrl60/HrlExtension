@@ -9,11 +9,26 @@ namespace HrlExtentions
 {
     public static class CollectionExtentions
     {
+        /// <summary>
+        /// Check object is in list
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="list"></param>
+        /// <returns></returns>
         public static bool In<T>(this T source, params T[] list)
         {
             if (null == source) throw new ArgumentNullException("source");
             return list.Contains(source);
         }
+        /// <summary>
+        /// Check Object value is between 2 value
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="actual"></param>
+        /// <param name="lower"></param>
+        /// <param name="upper"></param>
+        /// <returns></returns>
         public static bool Between<T>(this T actual, T lower, T upper) where T : IComparable<T>
         {
             return actual.CompareTo(lower) >= 0 && actual.CompareTo(upper) < 0;
@@ -34,22 +49,48 @@ namespace HrlExtentions
 
             return (IOrderedQueryable<T>)source.Provider.CreateQuery<T>(call);
         }
-
+        /// <summary>
+        /// Sort Collection By Field Name
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
         public static IOrderedQueryable<T> OrderBy<T>(this IQueryable<T> source, string propertyName)
         {
             return OrderingHelper(source, propertyName, false, false);
         }
-
+        /// <summary>
+        /// Sort Collection By Field Name
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="propertyName"></param>
+        /// <param name="descending"></param>
+        /// <returns></returns>
         public static IOrderedQueryable<T> OrderBy<T>(this IQueryable<T> source, string propertyName, bool descending)
         {
             return OrderingHelper(source, propertyName, descending, false);
         }
-
+        /// <summary>
+        /// Sort Collection By Field Name
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
         public static IOrderedQueryable<T> ThenBy<T>(this IOrderedQueryable<T> source, string propertyName)
         {
             return OrderingHelper(source, propertyName, false, true);
         }
-
+        /// <summary>
+        /// Sort Collection By Field Name
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="propertyName"></param>
+        /// <param name="descending"></param>
+        /// <returns></returns>
         public static IOrderedQueryable<T> ThenBy<T>(this IOrderedQueryable<T> source, string propertyName, bool descending)
         {
             return OrderingHelper(source, propertyName, descending, true);

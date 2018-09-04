@@ -10,7 +10,7 @@ namespace HrlExtentions
     public static class StringExtentions
     {
         /// <summary>
-        /// تبدیل رشته به تاریخ
+        /// Convert Persian String Value to Date
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
