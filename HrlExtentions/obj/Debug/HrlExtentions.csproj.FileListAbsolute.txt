@@ -1,0 +1,5 @@
+c:\users\lorestani\documents\visual studio 2015\Projects\HrlExtentions\HrlExtentions\obj\Debug\HrlExtentions.csprojResolveAssemblyReference.cache
+c:\users\lorestani\documents\visual studio 2015\Projects\HrlExtentions\HrlExtentions\bin\Debug\HrlExtentions.dll
+c:\users\lorestani\documents\visual studio 2015\Projects\HrlExtentions\HrlExtentions\bin\Debug\HrlExtentions.pdb
+c:\users\lorestani\documents\visual studio 2015\Projects\HrlExtentions\HrlExtentions\obj\Debug\HrlExtentions.dll
+c:\users\lorestani\documents\visual studio 2015\Projects\HrlExtentions\HrlExtentions\obj\Debug\HrlExtentions.pdb
